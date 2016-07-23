@@ -1,0 +1,36 @@
+<div class="backoffice">
+  <h2>Brève <%= @article.id %></h2>
+
+  <ul>
+    <li>
+      <strong>Source url:</strong>
+      <%= @article.source_url %>
+    </li>
+
+    <li>
+      <strong>Title:</strong>
+      <%= @article.title %>
+    </li>
+
+    <li>
+      <strong>Content:</strong>
+      <%= @article.content %>
+    </li>
+
+    <li>
+      <strong>Published at:</strong>
+      <%= @article.published_at %>
+    </li>
+
+    <li>
+      <strong>Tags:</strong>
+      <%= for tag <- @article.tags do %>
+        <%= tag %>
+      <% end %>
+    </li>
+
+  </ul>
+
+  <%= link "Modifier", to: article_path(@conn, :edit, @article), class: "btn" %>
+  <%= link "← Annuler", to: article_path(@conn, :index), class: "btn" %>
+</div>

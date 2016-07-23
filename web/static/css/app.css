@@ -1,0 +1,38 @@
+/**
+ * Common to all pages ; define layout and links.
+ */
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:link {
+    color: inherit;
+    border-bottom: 2px solid #dbe7ff;
+    text-decoration: inherit;
+}
+
+:visited {
+    color: inherit;
+    border-bottom-color: #dce1e2;
+}
+
+a:hover {
+    border-bottom-color: #2A7FFF;
+}
+
+header h1,
+header h2,
+article,
+.what-are-we,
+.global-alert {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}

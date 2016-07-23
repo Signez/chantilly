@@ -1,0 +1,41 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <p class="alert alert-danger">
+      Quelque chose s'est mal passé. Regardez ci-dessous.
+    </p>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :source_url, "URL de la source", class: "control-label" %>
+    <%= text_input f, :source_url, class: "form-control" %>
+    <%= error_tag f, :source_url %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :title, "Titre de la brève", class: "control-label" %>
+    <%= text_input f, :title, class: "form-control" %>
+    <%= error_tag f, :title %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :content, "Contenu", class: "control-label" %>
+    <%= textarea f, :content, class: "form-control" %>
+    <%= error_tag f, :content %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :published_at, "Publié le", class: "control-label" %>
+    <%= datetime_select f, :published_at, class: "form-control" %>
+    <%= error_tag f, :published_at %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :tags, "Tags", class: "control-label" %>
+    <%= text_input f, :tags, class: "form-control" %>
+    <%= error_tag f, :tags %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Sauvegarder →", class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,0 +1,48 @@
+/**
+ * Header-related CSS.
+ */
+
+header {
+  margin: 0 0 20px 0;
+  font-family: 'Alegreya Sans', sans-serif;
+  overflow: hidden;
+
+  background: #005C97; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #005C97 , #363795); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #005C97 , #363795); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+
+  h1 {
+    margin-bottom: 0;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  h2 {
+    font-weight: normal;
+    margin-top: 0;
+    font-size: 14pt;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.what-are-we {
+  label {
+    width: 200px;
+    position: absolute;
+    margin-left: -228px;
+    text-align: right;
+    color: gray;
+  }
+
+  .footnote {
+    font-size: 10pt;
+    color: gray;
+  }
+}
+
+.global-info {
+  background-color: #cfe3ff;
+  padding: 6px 5px 6px 10px;
+  border-radius: 3px;
+}

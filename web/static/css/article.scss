@@ -1,0 +1,113 @@
+/**
+ * Article styles.
+ */
+
+ @mixin flat-link {
+   a:link {
+     color: inherit;
+     border-bottom-width: 0;
+   }
+
+   a:hover, a:focus, a:active {
+     border-bottom-width: 2px;
+   }
+ }
+
+ @mixin icon-link($border-color) {
+   display: inline-block;
+   border: 1px solid #dce1e2;
+   line-height: 1.7;
+   padding: 0 8px 0 8px;
+   border-radius: 3px;
+
+   &:hover, &:active, &:focus {
+     border-color: $border-color;
+   }
+
+   img {
+     vertical-align: -3px;
+     margin-right: 3px;
+     margin-left: -4px;
+   }
+ }
+
+ article {
+   font-family: 'PT Sans', sans-serif;
+   margin: 60px auto;
+   position: relative;
+
+   time {
+     text-align: center;
+     display: block;
+     width: 100px;
+     position: absolute;
+     right: 100%;
+     line-height: 2;
+     font-weight: bold;
+     color: darken(#dbe7ff, 10%);
+   }
+
+   h1 {
+     font-family: 'Alegreya Sans', sans-serif;
+
+     @include flat-link;
+   }
+
+   .source {
+     color: gray;
+     margin-top: -15px;
+     font-size: 10pt;
+
+     @include flat-link;
+   }
+
+   .content {
+     line-height: 1.5;
+   }
+
+   .via, .author {
+     margin-top: 0;
+     margin-right: 10px;
+   }
+
+   .via {
+     font-size: 10pt;
+     float: left;
+
+     label {
+       color: gray;
+     }
+
+     a {
+       @include icon-link(orange);
+     }
+   }
+
+   .author {
+     font-size: 10pt;
+     float: right;
+
+     label {
+       color: gray;
+     }
+
+     a {
+       @include icon-link(#2A7FFF);
+     }
+   }
+
+   .tags {
+     clear: both;
+     display: block;
+     font-size: 9pt;
+     padding: 0;
+     margin-left: -5px;
+     color: gray;
+
+     li {
+       display: inline-block;
+       list-style: none;
+       padding: 0 5px;
+     }
+   }
+ }

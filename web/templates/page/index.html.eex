@@ -1,0 +1,79 @@
+<%= for article <- @articles do %>
+  <article>
+    <time><a href="#permalink">00:00</a></time>
+    <h1>
+      <a href="<%= article.source_url %>" title="Voir la source (xxxxxxxxxxxxx − yyyyyyyyyyyyyyyyyyyyyyyyyyy)">
+        <%= article.title %>
+      </a>
+    </h1>
+    <p class="source">
+      <a href="<%= article.source_url %>" title="zzzzzzzzzzz">
+        Source : <strong>xxxxxxxxxxxxx</strong> − yyyyyyyyyyyyyyyyyyyyyyyyyyy
+      </a>
+    </p>
+    <p class="content">
+      <%= article.content %>
+    </p>
+    <p class="via">
+      <label>via</label>
+      <a href="aaaaaaaaaaaaaaa" title="bbbbbbbbbbbbbbb">
+        ccccccccccccccc
+      </a>
+    </p>
+
+    <p class="author">
+      <label>par</label>
+      <a href="https://twitter.com/Signez" title="@Signez">
+        <img src="https://pbs.twimg.com/profile_images/670611828867661824/M84x332J.png" width="16" alt="" />
+        Stanibot
+      </a>
+    </p>
+    <ul class="tags">
+      <%= for tag <- article.tags do %>
+        <li><a href="#<%= tag %>">#<%= tag %></a></li>
+      <% end %>
+    </ul>
+  </article>
+<% end %>
+
+<article>
+  <time><a href="#permalink">13:52</a></time>
+  <h1>
+    <a href="https://telegram.org/blog/botprize" title="Voir la source (telegram.org − Blog officiel de Telegram)">
+      Telegram offrira 1 000 000 $ aux développeurs de bots sur sa plateforme
+    </a>
+  </h1>
+  <p class="source">
+    <a href="https://telegram.org/blog/botprize" title="$1,000,000 to Bot Developers. For free.">
+      Source : <strong>telegram.org</strong> − Blog officiel de Telegram
+    </a>
+  </p>
+  <p class="content">
+    Comme quoi, il n'y a pas que <a href="https://dev.botframework.com/">Microsoft qui s'intéresse aux bots</a>.
+    Pour mettre en avant les fonctionnalités de sa messagerie instantanée sécurisée
+    (concurrente de <a href="https://www.whatsapp.com/">WhatsApp</a> ou <a href="https://www.messenger.com/">Facebook
+    Messenger</a>), les russes derrière <a href="https://telegram.org/">Telegram</a> mettent 1 million de dollars sur
+    le sujet à buzz du moment, les bots, via des primes de 25 000 $ par bot créé qui leur plaisent. Si ça ne motive pas
+    certains développeurs à y créer un <em>@CarambarBot</em>, on ne sait plus comment faire.
+  </p>
+
+  <p class="via">
+    <label>via</label>
+    <a href="https://news.ycombinator.com/item?id=11522907" title="Telegram to award grants to bot developers | Hacker News">
+      <img src="https://news.ycombinator.com/favicon.ico" width="16" alt="" />
+      Hacker News
+    </a>
+  </p>
+  <p class="author">
+    <label>par</label>
+    <a href="https://twitter.com/Signez" title="@Signez">
+      <img src="https://pbs.twimg.com/profile_images/670611828867661824/M84x332J.png" width="16" alt="" />
+      Stanibot
+    </a>
+  </p>
+  <ul class="tags">
+    <li><a href="#bots">#bots</a></li>
+    <li><a href="#telegram">#telegram</a></li>
+    <li><a href="#telegram">#MessagerieInstantanée</a></li>
+  </ul>
+</article>

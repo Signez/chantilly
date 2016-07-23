@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Brèves sur l'actualité du numérique, en français. Sourcé, bref et cash.">
+    <meta name="author" content="L'équipe de Frais.io">
+
+    <title>Frais.io − Sourcé, bref et cash</title>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700,500,400italic,500italic,700italic,800,800italic,900,900italic,300italic,300,100italic,100|PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        Frais.io
+      </h1>
+      <h2>
+        Sourcé, bref et cash.
+      </h2>
+    </header>
+    <div class="what-are-we">
+      <label>Qu'est-ce que c'est ?</label>
+      <p>
+        Un flux d'actualité sur le numérique, sous forme de brèves sourcées qui
+        pointent vers les articles originaux (en anglais). Souvent bien avant
+        que les médias spécialisés français en parlent.
+      </p>
+      <label>Qui êtes-vous ?</label>
+      <p>
+        Ceci n'est pas du journalisme. Nous sommes juste des rageux qui aimons le dévelopement, la high-tech,
+        l'Internet et les enjeux qui vont avec. <a href="#">Nos auteurs…</a>
+      </p>
+      <label>Vous êtes blasés ?</label>
+      <p>
+        Un peu. À forcer de surfer sur les hypes, on en développe des crampes. ¯\_(ツ)_/¯
+      </p>
+      <p class="footnote">
+        Ce site utilise des cookies et tout le monde s'en fout.
+      </p>
+    </div>
+
+    <%
+      global_info = get_flash(@conn, :info)
+      global_error = get_flash(@conn, :error)
+    %>
+    <%= if global_info do %>
+      <p class="global-alert global-info" role="alert"><%= global_info %></p>
+    <% end %>
+    <%= if global_error do %>
+      <p class="global-alert global-error" role="alert"><%= global_error %></p>
+    <% end %>
+
+    <div id="main">
+      <%= render @view_module, @view_template, assigns %>
+    </div>
+
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

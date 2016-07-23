@@ -1,0 +1,61 @@
+.backoffice {
+  width: 750px;
+  margin: auto;
+  border: 1px solid #cccccc;
+  padding: 25px;
+
+  h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  .form-group {
+    margin-bottom: 6px;
+
+    label {
+      display: block;
+      font-weight: bold;
+    }
+  }
+
+  input[type=text].form-control {
+    display: block;
+    width: 100%;
+  }
+
+  textarea.form-control {
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .alert {
+    padding: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+
+    &.alert-danger {
+      background-color: #ffd2d2;
+      border-color: #940000;
+    }
+  }
+
+  .table {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    border: 1px solid #cccccc;
+    padding: 5px;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 10pt;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background-color: #4866eb;
+    border: 0 none;
+    color: white;
+  }
+}

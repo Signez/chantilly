@@ -1,0 +1,8 @@
+<div class="backoffice">
+  <h2>Nouvelle brève</h2>
+
+  <%= render "form.html", changeset: @changeset,
+                          action: article_path(@conn, :create) %>
+
+  <%= link "← Annuler", to: article_path(@conn, :index), class: "btn" %>
+</div>
